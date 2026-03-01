@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid gray;
+    border-radius: 5px;
+  }
+  p {
+    color: red;
+    font-weight: bold;
+  }
+
+</style>
+</head>
+<body>
+     <!-- //task - 1  --> 
+    <!-- <p id="timer">10</p> -->
+
+    <!-- task-2 -->
+    <!-- <p id="clock"></p> -->
+
+     <!-- task-3 -->
+    <!-- <p id="watch">0</p>
+    <button onclick="startWatch()">Start</button>
+    <button onclick="stopWatch()">Stop</button> -->
+
+      <!-- task-4 -->
+    <!-- <div id="box" style="width: 50px; height: 50px; background: red; position: absolute;"></div><br><br><br><br> -->
+
+      <!-- task-5 -->
+    <span id="text"></span>
+
+  
+    <script>
+
+        
+        //  Tasksss--------------------------------------------------------------
+
+// Task-1
+//    let count = 10;
+//   let intervalOut = setInterval(() => {
+//     count--;
+//     document.getElementById("timer").innerText = count;
+
+//     if (count === 0) {
+//       clearInterval(intervalOut); // sahi variable naam
+//       document.getElementById("timer").innerText = "Time's up!";
+//     }
+//   }, 1000);
+
+
+
+// Task-2
+//   function updateClock() {
+//     let now = new Date();
+//     document.getElementById("clock").innerText = now.toLocaleTimeString();
+//   }
+//   setInterval(updateClock, 1000);
+
+
+
+// Task-3
+// let time = 0;
+//   let intervalID;
+
+//   function startWatch() {
+//     intervalID = setInterval(() => {
+//       time++;
+//       document.getElementById("watch").innerText = time;
+//     }, 1000);
+//   }
+
+//   function stopWatch() {
+//     clearInterval(intervalID);
+//   }
+
+
+
+
+// Task-4
+// let position = 0;
+//   setInterval(() => {
+//     position += 5;
+//     document.getElementById("box").style.marginLeft = position + "px";
+//   }, 100); // 0.1ms second
+
+
+
+
+// Task-5
+let message = "Welcome to JavaScript!"; 
+let index = 0; 
+
+setInterval(() => { 
+  if (index < message.length) { 
+    document.getElementById("text").innerHTML +=  message[index]; 
+    index++; 
+  }
+}, 300);
+
+
+    </script>
+    
+</body>
+</html>

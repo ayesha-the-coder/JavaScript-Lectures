@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Form Validation </h1>
+  <form action=""  onsubmit="return formvaliation()">
+    Name: <input type="text" placeholder="Enter Yuor Name" id="name">
+    Email: <input type="email" placeholder="Enter Yuor Email" id="email">
+     <button type="submit">Send</button>
+  </form>
+  <h4>Show Data</h4>
+  <p id="output"></p>
+
+  <script>
+    function formvaliation(){
+     let n =  document.getElementById("name").value;
+     let e =  document.getElementById("email").value;
+
+     if(n == ""  ||  e == ""){
+      alert("All fields Are Required.")
+      return false;
+     }
+     else{
+      alert('Login Submit Successfully..');
+      
+     }
+
+     let outputshow =  document.getElementById("output");
+     outputshow.innerHTML += `<p>Your Name is : <strong> ${n} </strong> Your Email is : <strong> ${e} </strong> </p>` ;
+ 
+             document.getElementById("name").value = "";
+             document.getElementById("email").value = "";
+             return false;
+    }
+
+  </script>
+</body>
+</html>

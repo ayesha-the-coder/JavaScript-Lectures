@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of and For in Loops</title>
+</head>
+
+<body>
+    <script>
+
+        // Example # 1
+
+        // let myarray = [10, 20 , 40 , 30,60 ];
+
+        // for(let i =0; i<myarray.length; i++){
+        //    document.write("array value is : " + myarray[2] + "<br>");
+        // //    document.write("array value is : " + myarray[i] + "<br>");
+        // }
+
+        // Example # 2 for....of...loop
+        // for(let list of myarray){
+        //     //  document.write("array value is : " + list + "<br>");
+        //      document.write("array value is : " + myarray[3] + "<br>");
+        // }
+
+
+        // Example - 2  for....of...loop
+        // let str = "html";
+
+        // for (let i of str) {
+        //     document.write(i + "<br>");
+        //     // document.write(str[2] + "<br>");
+        // }
+
+        // let myvalue ={
+        //     name : "Talha",
+        //     email:"talha@gamil.com",
+        //     contact: 859654721
+        // }
+        // for(let key in myvalue){
+        //     document.write("key is : " + key + " value is : " + myvalue[key] + "<br>");
+        // }
+
+        // Example - 1 For in loop
+
+        // let obj = {
+        //     name: "Ali",
+        //     email: "ali@gmail.com",
+        //     age : 21
+        // }
+        // for (let key in obj) {
+        //     // document.write(key + ":" + obj[key] + "<br>");
+        //      document.write(obj[key]+ ":" + "<br>");
+        // }
+        //////////////////////////////////////////////////////////////////////
+
+        // Nested Loop in Javascript Next Class
+
+        //    Example # 1
+
+        // for(let i=1; i<=3; i++){
+        //     document.write("<b>Outer loop</b>"  + i + "<br>");
+
+        //     for(let j=1; j<=5; j++){
+        //          document.write("Inner loop" + j +"<br>");
+        //     }
+        //     document.write("<br>")
+        // }
+
+        //    Example # 2
+
+        for (let a = 1; a <= 4; a++) {
+            document.write(a + " = ")
+            for (let f = 1; f <= a; f++) {
+                document.write(a)
+            }
+            document.write("<br>")
+        }
+// 1 = 1
+// 2 = 12
+// 3 = 123
+// 4 = 1234
+
+// 1 = 1
+// 2 = 22
+// 3 = 333
+// 4= 4444
+// 5= 55555
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

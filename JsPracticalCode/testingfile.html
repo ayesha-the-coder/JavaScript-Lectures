@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+         <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+
+    <script>
+        //Simple Function Example # 1
+        function sum(a, b){
+              return a+ b;
+        }
+        let c = sum(50,10);
+        console.log(c);
+
+        //Arrow Function Example # 1
+        let mysum = (x,y) =>{
+            return x*y;
+        }
+        let ans = mysum(5, 6)
+        console.log("Answer is : " + ans);
+
+        //A,rrow Function Example # 2
+       let mynum = (d,f)=> d/f
+       console.log(mynum(100,10));
+       ////////////////////////////////////////////////////////////////////////////////////////////////////////
+       // setTimeout() function Example # 1 
+
+       setTimeout( function(){
+        alert("This Message show after 5 Second..")
+       }, 5000) // 5000 milisecond means 5 second
+
+        // setTimeout() with Arrow function Example # 2
+
+    //    setTimeout(()=>{
+    //     document.write("This is a SetTimeOut Message. ")
+    //    },3000)
+
+       
+        // setTimeout() Parameter and Argument Example # 2
+        function info(name,fname){
+            console.log(`my name is : ${name} my father name is : ${fname}`)
+
+        }setTimeout(info,5000, "Hamza" , "Talib");
+
+
+    //     let timeout =  setTimeout(()=>{
+    //     document.write("This is a SetTimeOut Message. ")
+    //    },3000)
+    //    clearTimeout(timeout);
+
+    /////////////////////////////////////////////////////////////////
+
+            let timer;
+
+            function startTimer() {
+                timer = setTimeout(function() {
+                alert("Hello Students!");
+                }, 5000);
+            }
+
+            function stopTimer() {
+                clearTimeout(timer);
+                alert("Timer Cancelled!");
+            }
+  /////////////////////////////////////////////////////////////////////////
+// setInterval() function Example # 1
+
+let clear = setInterval(function(){
+    console.log("This Message Print After 5 Second..")
+},5000)
+clearInterval(clear);
+
+let count = 0
+
+let mycleartime = setInterval(function(){
+    count++;
+    console.log(count);
+    if(count == 5){
+
+        clearInterval(mycleartime);
+        console.log("SetInterval is End..")
+    }
+
+},4000)
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

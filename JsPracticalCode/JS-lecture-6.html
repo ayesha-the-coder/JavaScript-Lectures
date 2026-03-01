@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function</title>
+</head>
+
+<body>
+    <script>
+        // Simple Function  Example 1 
+        function myfun() {
+            console.log("hello every One how are you today..");
+            console.log("hello every One..");
+        }
+        myfun();
+        myfun();
+        myfun();
+
+        // Function with parameters and argument Example 1
+
+        function myname(name) {
+            console.log("How are you ! " + name);
+        }
+
+        myname("Ayesha");
+
+        // Function with parameters and argument Example 2
+
+        function sum(a, b) {
+            console.log(a + b);
+        }
+        sum(5, 10);
+        sum(15, 10);
+
+        // Function Return Concept Example 1
+
+        function sumTwoNumber(num1, num2) {
+            console.log(num1 + num2);
+            return num1 + num2;
+        }
+        let result = sumTwoNumber(5, 20);
+        console.log("Result is : " + result);
+
+
+        // Function Return Concept Example 2
+
+        function sumTwoNumber(num1, num2) {
+            // console.log(num1 + num2);
+            return num1 + num2;
+        }
+        let result = sumTwoNumber(5, 20);
+        let result1 = sumTwoNumber(25, 100);
+        let result2 = sumTwoNumber(59, 200);
+        console.log("Result is : " + result);
+        console.log("Result is : " + result1);
+        console.log("Result is : " + result2);
+    </script>
+
+</body>
+
+</html>
