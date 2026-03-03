@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="myclick()">Click</button>
+    <button type="submit" id="mybtn">login</button>
+    <p id="para">Lorem ipsum dolor sit amet.</p>
+    <button id="event">Event button</button>
+    <p id="demo"></p>
+    <script>
+        function myclick(){
+            alert("This is a alert.")
+        }
+
+        document.getElementById("mybtn").onclick = abc;
+        function abc(){
+            console.log("this is a function alert..")
+        }
+
+        // document.getElementById("para").onclick = mypara;
+        // function mypara(){
+        //     document.getElementById("para").style.cursor = "pointer";
+        //     document.getElementById("para").style.color = "red";
+
+        // }
+
+        document.getElementById("para").addEventListener("click", mypara);
+        
+         function mypara(){
+            document.getElementById("para").style.cursor = "pointer";
+            document.getElementById("para").style.color = "red";
+            document.getElementById("para").style.fontSize = "32px";
+
+        }
+
+        document.addEventListener("keypress", click)
+        
+
+        function click(e){
+            console.log("User Press this keyborad button => " + e.key);
+        }
+
+
+      let element =   document.getElementById("event");
+        element.addEventListener("mouseover", myEventFun);
+        element.addEventListener("mouseout", myEventout);
+
+        function myEventFun(){
+            document.getElementById("demo").innerText += "Mouse in..";
+        }
+        
+        function myEventout(){
+            document.getElementById("demo").innerText += "Mouse out..";
+        }
+       
+       
+
+
+
+    </script>
+    
+</body>
+</html>
