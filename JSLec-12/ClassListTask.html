@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Show Hide Password</title>
+
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+
+body{
+    font-family: Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f2f2f2;
+}
+
+.password-box{
+    position:relative;
+}
+
+input{
+    padding:10px;
+    font-size:16px;
+    width:250px;
+}
+
+.eye{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    color:#555;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="password-box">
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<i class="fa-solid fa-eye eye" id="eye" onclick="togglePassword()"></i>
+
+</div>
+
+<script>
+
+function togglePassword(){
+
+var pass = document.getElementById("password");
+var eye = document.getElementById("eye");
+
+if(pass.type === "password"){
+
+    pass.type = "text";
+    eye.classList.remove("fa-eye");
+    eye.classList.add("fa-eye-slash");
+
+}else{
+
+    pass.type = "password";
+    eye.classList.remove("fa-eye-slash");
+    eye.classList.add("fa-eye");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
