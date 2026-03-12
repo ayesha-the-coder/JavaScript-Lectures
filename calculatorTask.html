@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javscript Calculator</title>
+    <style>
+       
+        input[type="text"]{
+            height: 45px;
+            width: 205px;
+        }
+    
+        input[type="button"]{
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+        } 
+</style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="4"><input type="text" id="display"></th>
+        
+     
+    </tr>
+    <tr>
+        <th><input type="button" value="1" onclick="pick(1)"></th>
+        <th><input type="button" value="2" onclick="pick(2)"></th>
+        <th><input type="button" value="3"onclick="pick(3)"></th>
+        <th><input type="button" value="/"onclick="pick('/')" ></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="4" onclick="pick(4)"></th>
+        <th><input type="button" value="5" onclick="pick(5)"></th>
+        <th><input type="button" value="6" onclick="pick(6)"></th>
+        <th><input type="button" value="*" onclick="pick('*')"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="7" onclick="pick(7)"></th>
+        <th><input type="button" value="8" onclick="pick(8)"></th>
+        <th><input type="button" value="9" onclick="pick(9)"></th>
+        <th><input type="button" value="+" onclick="pick('+')"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="C" onclick="clr()" ></th> 
+        <th><input type="button" value="0" onclick="pick(0)"></th>
+        <th><input type="button" value="=" onclick="result()"></th>
+        <th><input type="button" value="-" onclick="pick('-')"></th>
+    </tr>
+
+
+
+
+</table>
+<script>
+    function pick(val){
+        document.getElementById("display").value += val;
+
+    }
+    function clr(){
+        document.getElementById("display").value = "";
+
+    }
+    function result(){
+        let a = document.getElementById("display").value;
+        let b=eval(a);
+        document.getElementById("display").value = b;
+
+    }
+</script>
+
+<!-- <table>
+    <tr>
+        <th colspan="4"><input type="text" id="display"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="1" onclick="numcalculator(1)"></th>
+        <th><input type="button" value="2"onclick="numcalculator(2)"></th>
+        <th><input type="button" value="3"onclick="numcalculator(3)"></th>
+        <th><input type="button" value="/"onclick="numcalculator('/')"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="4"onclick="numcalculator(4)"></th>
+        <th><input type="button" value="5"onclick="numcalculator(5)"></th>
+        <th><input type="button" value="6"onclick="numcalculator(6)"></th>
+        <th><input type="button" value="*"onclick="numcalculator('*')"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="7"onclick="numcalculator(7)"></th>
+        <th><input type="button" value="8"onclick="numcalculator(8)"></th>
+        <th><input type="button" value="9"onclick="numcalculator(9)"></th>
+        <th><input type="button" value="+"onclick="numcalculator('+')"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="C"onclick="clr()"></th>
+        <th><input type="button" value="0"onclick="numcalculator(0)"></th>
+        <th><input type="button" value="-"onclick="numcalculator('-')"></th>
+        <th><input type="button" value="="onclick="result()"></th>
+    </tr>
+</table>
+
+<script>
+    function numcalculator(val){
+        document.getElementById("display").value +=val;
+    }
+    function clr(){
+        document.getElementById("display").value = "";
+    }
+    function result(){
+        let a = document.getElementById("display").value;
+        let b =eval(a);
+        document.getElementById("display").value = b;
+    }
+</script> -->
+    
+</body>
+</html>
